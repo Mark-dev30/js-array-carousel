@@ -46,6 +46,9 @@ next.addEventListener('click', function(){
     
     items[itemActive].classList.remove('active');
     circles[itemActive].classList.remove('active')
+    if(itemActive == 4){
+        itemActive = -1;
+    }
     itemActive++
     items[itemActive].classList.add('active');
     circles[itemActive].classList.add('active')
@@ -59,6 +62,9 @@ prev.addEventListener('click', function(){
     //stessa cosa per i cerchi
     items[itemActive].classList.remove('active');
     circles[itemActive].classList.remove('active');
+    if(itemActive == 0){
+        itemActive = 5;
+    }
     itemActive--
     items[itemActive].classList.add('active');
     circles[itemActive].classList.add('active')
